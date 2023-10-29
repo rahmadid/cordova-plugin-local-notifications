@@ -3,6 +3,10 @@
  *
  * Copyright (c) Sebastian Katzer 2017
  *
+ * Android 13+ notification permission codes were copied from:
+ * https://github.com/katzer/cordova-plugin-local-notifications/pull/2000#issuecomment-1507189533
+ * https://github.com/katzer/cordova-plugin-local-notifications/pull/2000#issuecomment-1516312885
+ * 
  * This file contains Original Code and/or Modifications of Original Code
  * as defined in and that are subject to the Apache License
  * Version 2.0 (the 'License'). You may not use this file except in
@@ -78,9 +82,9 @@ public final class Manager {
     }
 
     /**
-     * Check if app has local notification permission.
+     * Ask if user has enabled permission for local notifications.
      */
-    public boolean hasPermission() {
+    public boolean areNotificationsEnabled () {
         return getNotCompMgr().areNotificationsEnabled();
     }
 
